@@ -1,0 +1,67 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+ 
+
+    <ul class="nav top">
+        <li class="nav-item">
+            <span class="nav-text"> <img src="./res/icon.svg" class="headIcon" height="20px"></span>
+        
+        </li>
+        <li class="nav-item">
+          <span class="nav-text">About</span>
+          </li>
+        <li class="nav-item">
+          <span class="nav-text">Profile</span>
+        </li>
+        <li class="nav-item">
+          <span class="nav-text">Rank</span>    
+          </li>
+       
+      </ul>
+
+
+    <div class="row">
+        <div class="col-sm-5 p-4">
+            <div class="headTitle">
+                <span class="headTitleStyle">T</span><span class="headTitleStyle">y</span><span class="headTitleStyle">p</span><span class="headTitleStyle">e</span><span class="headTitleStyle"> </span><span class="headTitleStyle">R</span><span class="headTitleStyle">a</span><span class="headTitleStyle">c</span><span class="headTitleStyle">i</span><span class="headTitleStyle">n</span><span class="headTitleStyle">g</span>
+
+            </div>
+            <div style="text-align: center;">
+                <br>
+               
+            
+                    <!-- <input id="name"  style="width: 50%;" placeholder="name here" ><br>
+                    <input id="id" placeholder="id here" ><br> -->
+                    <input id="roomname" placeholder="Room name here" >
+                       <br>
+               
+                <br>
+                <button id="game" class="btn btn-dark">Start game</button>
+            </div>
+
+        </div>
+        <div class="col-sm-7 p-4" style="text-align: center; overflow-x: hidden;"> <img src="./res/man_typing.gif" style=" margin-top: 10%;" width="50%"></div>
+
+    </div>
+
+    <div class="note">
+        Project by Abhishek Amrute
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

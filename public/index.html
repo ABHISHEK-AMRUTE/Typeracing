@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/new_index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="navi">
+        <span class="customTab">
+            About
+        </span>
+        <span class="customTab">
+            Profile
+        </span>
+        <span class="customTab">
+            Ranks
+        </span>
+    </div>
+
+    <div class="mainHeading">
+        TypeRacing<br>
+        <button type="button" class="btn btn-secondary" ><a href="#startRacing" style="text-decoration: none; color: white;">Start Racing</a></button>
+    </div>
+    <div class="bottom-paper">
+
+
+        <img  ondragstart="return false" class="bottom-waves" src="./res/bottom_waves.svg">
+
+
+
+
+        <div class="row" id="startRacing">
+            <div class="col-sm-6 p-6">
+                <img ondragstart="return false" class="teslaImage" src="./res/tesla.svg">
+
+            </div>
+
+            <div class="racingForm" class="col-sm-6 p-6">
+               <div style="padding: 25px;">
+                <div class="formHead"> Join Tracks</div>
+                <input id="roomname" type="text"  class="inputs" placeholder="RoomName" /><br>
+
+                <input type="text"  class="inputs" placeholder="NickName"/>
+                <div style="text-align: right; margin-top: 20px;">
+                    <button   id="game" type="button" class="btn btn-secondary">Start Racing</button>
+   
+                </div>
+               </div>
+
+            </div>
+        </div>
+
+
+        <div class="row" id="startRacing">
+            <div class="col-sm-6 p-6" style="padding: 50px;">
+                <canvas id="myChart" width="auto" height="auto"></canvas>
+            </div>
+
+            <div class="racingForm" class="col-sm-6 p-6">
+                
+
+            </div>
+        </div>
+      
+        
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: 'WPM',
+            data: [112, 49, 35, 55, 52, 113],
+            backgroundColor: [
+                'black'
+            ],
+            borderColor: [
+                '#212121',
+                
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+        <img class="footer-waves" ondragstart="return false" src="./res/footer.svg">
+        <div class="belowFooter">
+          <div class="footerText">  Project by Abhishek Amrute <br> Find me at</div>
+         <div style="margin-top: 10px; text-align: center;">
+            <a  target="_blank" href="https://www.linkedin.com/in/abhishek-amrute-33808a172/"><img title="linkedin" class="icons" src="./res/linkedin.svg"></a>
+            <a  target="_blank" href="https://github.com/ABHISHEK-AMRUTE"> <img title="Github" class="icons" src="./res/github-sign.svg"></a>
+                <a  target="_blank" href="https://dribbble.com/abhishek_bt18"> <img  title="Dribbble" class="icons" src="./res/dribbble.svg"></a>
+         </div>
+         <!-- Tech Stack<br>
+         <ul>
+             <li>Plain HTML/CSS</li>
+             <li>JavaScript</li>
+             <li>
+                 Artifacts using Figma
+             </li>
+             <li>
+                 NodeJs backend
+             </li>
+         </ul> -->
+        </div>
+       
+    </div>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

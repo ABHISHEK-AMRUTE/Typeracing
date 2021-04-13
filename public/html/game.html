@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/game.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="row navigation">
+        <div class="col-sm-3">
+            Home
+        </div>
+        <div class="col-sm-6">
+            <div id="notificationText" class="notification">
+                MSG : Waiting for admin
+            </div>
+        </div>
+        <div class="col-sm-3">
+
+            <button id="inviteButton" class="button">Invite friends</button>
+            <button id="startGame" class="start"> Start Game</button>
+            <span id="timerInSec" class="timer"> 10 Sec</span>
+        </div>
+    </div>
+
+    <div class="containerForCars">
+        <div id="userList">
+            <!-- <div>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <img height="50px" src="../res/esf-removebg-preview.png" id="car4562166"
+                            style="margin-left: 93%;">
+                        <div class="progress" style="background-color: blue; width: 100%;" id="widthBar4562166"></div>
+                    </div>
+                    <div class="col-sm-2">
+                        <span class="info">Abhishek Amrute<br> 45 WPM</span>
+                    </div>
+                </div>
+
+
+                <hr>
+            </div> -->
+        </div>
+
+    </div>
+    <div class="wordpad">
+        <div id="paraToShow"><span class="greenn" id="correct"></span><span class="redd" id="incorrect"></span><span
+                id="normal"></span></div>
+        <br>
+        <textarea id="inputLines"></textarea>
+        <br>
+
+    </div>
+</body>
+<script src="../js/new_user_title.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="../js/user_tile.js"></script>
+<script src="../js/game.js"></script>
+
+</html>
