@@ -10,5 +10,7 @@ button_submit.addEventListener('click',function(){
     {
         localStorage.setItem('userName',name.value);
         localStorage.setItem('userId',ID.value);
+
+         location.replace('../../');
     }
 })
