@@ -47,6 +47,10 @@ const inviteButton = document.getElementById('inviteButton');
 const notificationText = document.getElementById('notificationText');
 const timerInSec = document.getElementById('timerInSec');
 const textArea = document.getElementById('inputLines')
+const rankBoard = document.getElementById('rankboard');
+const trafficLight = document.getElementById('trafficLight');
+
+
 
 // textArea.readOnly = true;
 if(is_admin)
@@ -61,6 +65,7 @@ if(is_admin)
 
 
 startButton.addEventListener('click',function(){
+    trafficLight.style.border = "2px solid red"
     socket.emit('startGame',roomname);
 });
 
@@ -141,7 +146,10 @@ socket.on('progress',(id,progress)=>{
 socket.on('completed',(name,id,time)=>{
     scoreArray.push({name:name,id:id,time:time});
     scoreArray.sort(function(a,b){return a.time < b.time})
-    console.log(scoreArray);
+    rankBoard.innerHTML = "";
+    scoreArray.forEach(element => {
+        rankBoard.appendChild(getRankBoardItem(element.name)); 
+    });
 })
 
 
@@ -173,6 +181,12 @@ socket.on('start',(text)=>{
           startTime = d.getTime();
 
         } else {
+            if(timeleft==5)
+            {
+                trafficLight.style.border = "2px solid yellow"
+            }else if(timeleft==1){
+                trafficLight.style.border = "2px solid green"
+            }
             timerInSec.innerHTML = timeleft + " Sec";
         }
         timeleft -= 1;

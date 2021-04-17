@@ -127,3 +127,38 @@ user-select: none;
     startGame: 5px;
     
 }
+
+.flex-container {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: flex;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    align-items: center;
+       justify-content: center;
+    }
+  }
+  .flex-container > div {
+    background-color: white;
+    color: black;
+    padding: 20px;
+
+    align-items: stretch;
+    font-size: 20px;
+  }
+
+  .footer{
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #1e1d1de3 !important;
+     
+      color: white;
+  }

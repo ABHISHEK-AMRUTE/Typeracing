@@ -8,7 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -31,16 +32,19 @@
         </div>
     
      
-            <div class="containerForCars card shadow-sm p-3 mb-5">
+            <div id="trafficLight"  style="transition: 1s;"  class="containerForCars card shadow-sm p-3 mb-5">
                 <div style="padding: 20px;">
                     <div class='row'>
                           <div class='col-sm-10'>
                            <b style="font-size: 22px;"> Sample Room</b>
+                           <!-- <span id="trafficLight" style="transition: 1s;height: 50px;width: 50px; border-radius: 50px;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                           </span> -->
                           </div>
         
                           <div class='col-sm-2 buttonArea'>
-                            <button id="inviteButton" class="btn btn-secondary">Invite friends</button>
-                            <button id="startGame" class="btn btn-secondary start"> Start Game</button>
+                            <button id="inviteButton" class="btn btn-dark">Invite friends</button>
+                            <button id="startGame" class="btn btn-dark start"> Start Game</button>
                           </div>
         
                     </div>
@@ -67,19 +71,73 @@
                 <div id="paraToShow"><span class="greenn" id="correct"></span><span class="redd" id="incorrect"></span><span
                         id="normal"></span></div>
                 <br>
-                <textarea autocomplete="false"  id="inputLines"></textarea>
+                <textarea autocomplete="false"  id="inputLines" placeholder="Type above text here when timer stops"></textarea>
                 <br>
         
             </div>
         
             </div>
+          
+
+            
+<div class="flex-container">
+    <div class="card shadow-sm p-3 mb-5" style="width : 70%;">
+         
+        <div style="padding: 2vw;">
+            <h4>  Your racing history</h4> 
+            <canvas id="myChart" width="auto" height="auto"></canvas>
+        </div>
+    </div>
+    <div class="card shadow-sm p-3 mb-5" style="width : 30%;">
+       <div style="padding: 2vw;">
+  <h4> Rankboard</h4><br>
+       <div  id = "rankboard" class="list-group">
+        <a class="list-group-item list-group-item-action">No one here, till now.</h10></a>
+       </div>
+       </div>
+      
+    </div>
+    
+  </div>
         
-   
-   
+   <div class="footer">
+         <a class="list-group-item list-group-item-action">Typeracer-clone <h10>by Abhishek Amrute</h10></a>
+   </div>
 </body>
+        
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: 'WPM',
+                data: [112, 49, 35, 55, 52, 113],
+                backgroundColor: [
+                    'black'
+                ],
+                borderColor: [
+                    '#212121',
+                    
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    </script>
+    
 <script src="../js/new_user_title.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="../js/user_tile.js"></script>
+<script src="../js/rankBoardItem.js"></script>
 <script src="../js/game.js"></script>
 
 </html>
