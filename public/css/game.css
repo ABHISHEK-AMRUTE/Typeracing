@@ -58,7 +58,7 @@ body{
 -ms-user-select: none;
 -o-user-select: none;
 user-select: none;
-    font-size: large;
+    font-size: 20px
 }
 
 #inputLines{
@@ -72,11 +72,12 @@ user-select: none;
 .containerForCars{
   
     margin-top: 40px;
-    margin-left: 30px;
-    margin-right: 30px;
-    border: 2px solid grey;
+    margin-left: 5vw;
+    margin-right: 5vw;
+   
     border-radius: 3px;
     padding: 10px;
+    
     
     background-color:white;
 }
@@ -115,3 +116,14 @@ user-select: none;
 }
 
 
+
+
+#inviteButton{
+    margin: 5px;
+
+}
+
+#inviteButton{
+    startGame: 5px;
+    
+}
