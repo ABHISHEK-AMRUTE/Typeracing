@@ -13,52 +13,67 @@
 
 <body>
 
-
-    <div class="row navigation">
-        <div class="col-sm-3">
-            Home
-        </div>
-        <div class="col-sm-6">
-            <div id="notificationText" class="notification">
-                MSG : Waiting for admin
+    
+        <div id="navigationBar" class="row navigation">
+            <div class="col-sm-3">
+                Home
+            </div>
+            <div class="col-sm-6">
+                <div id="notificationText" class="notification">
+                    MSG : Waiting for admin
+                </div>
+            </div>
+            <div class="col-sm-3">
+    
+    
+                <span id="timerInSec" class="timer"> 10 Sec</span>
             </div>
         </div>
-        <div class="col-sm-3">
-
-            <button id="inviteButton" class="button">Invite friends</button>
-            <button id="startGame" class="start"> Start Game</button>
-            <span id="timerInSec" class="timer"> 10 Sec</span>
-        </div>
-    </div>
-
-    <div class="containerForCars">
-        <div id="userList">
-            <!-- <div>
-                <div class="row">
-                    <div class="col-sm-10">
-                        <img height="50px" src="../res/esf-removebg-preview.png" id="car4562166"
-                            style="margin-left: 93%;">
-                        <div class="progress" style="background-color: blue; width: 100%;" id="widthBar4562166"></div>
-                    </div>
-                    <div class="col-sm-2">
-                        <span class="info">Abhishek Amrute<br> 45 WPM</span>
-                    </div>
+    
+        <div class="containerForCars card shadow-sm p-3 mb-5">
+            <div style="padding: 20px;">
+                <div class='row'>
+                      <div class='col-sm-10'>
+                        Sample Room
+                      </div>
+    
+                      <div class='col-sm-2 buttonArea'>
+                        <button id="inviteButton" class="btn btn-primary">Invite friends</button>
+                        <button id="startGame" class="btn btn-primary start"> Start Game</button>
+                      </div>
+    
                 </div>
-
-
-                <hr>
-            </div> -->
+            </div>
+            <div id="userList" style="padding: 20px;">
+                <!-- <div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <img height="50px" src="../res/esf-removebg-preview.png" id="car4562166"
+                                style="margin-left: 93%;">
+                            <div class="progress" style="background-color: blue; width: 100%;" id="widthBar4562166"></div>
+                        </div>
+                        <div class="col-sm-2">
+                            <span class="info">Abhishek Amrute<br> 45 WPM</span>
+                        </div>
+                    </div>
+    
+    
+                    <hr>
+                </div> -->
+            </div>
+    
+        <div class="wordpad">
+            <div id="paraToShow"><span class="greenn" id="correct"></span><span class="redd" id="incorrect"></span><span
+                    id="normal"></span></div>
+            <br>
+            <textarea autocomplete="false"  id="inputLines"></textarea>
+            <br>
+    
         </div>
-
-    </div>
-    <div class="wordpad">
-        <div id="paraToShow"><span class="greenn" id="correct"></span><span class="redd" id="incorrect"></span><span
-                id="normal"></span></div>
-        <br>
-        <textarea id="inputLines"></textarea>
-        <br>
-
-    </div>
+    
+        </div>
+   
+   
 </body>
 <script src="../js/new_user_title.js"></script>
 <script src="/socket.io/socket.io.js"></script>

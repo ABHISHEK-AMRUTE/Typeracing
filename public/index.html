@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>Typeracing</title>
     <link rel="stylesheet" href="./css/new_index.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,20 +12,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
-    <link rel="icon" href="./res/keyboard.svg" type=" image/svg+xml">
+    <link rel="icon" href="./res/keyboardd.svg" type=" image/svg+xml">
 </head>
 
 <body>
 
     <div class="navi">
         <span class="customTab">
-            About
+            
+            <a href="#startRacing" style="text-decoration: none; color: white;">About</a>
         </span>
         <span class="customTab">
-            Profile
+            <a href="#profile" style="text-decoration: none; color: white;">Profile</a>
+  
         </span>
         <span class="customTab">
-            Ranks
+            <a href="#startRacing" style="text-decoration: none; color: white;">Ranks</a>
+            
         </span>
     </div>
 
@@ -61,18 +65,20 @@
             </div>
         </div>
 
+<div id="profile">
 
-        <div class="row" id="startRacing">
-            <div class="col-sm-6 p-6" style="padding: 50px;">
-                <canvas id="myChart" width="auto" height="auto"></canvas>
-            </div>
-
-            <div class="racingForm" class="col-sm-6 p-6">
-                
-
-            </div>
+    <div class="row" id="startRacing">
+        <div class="col-sm-6 p-6" style="padding: 50px;">
+            <canvas id="myChart" width="auto" height="auto"></canvas>
         </div>
-      
+
+        <div class="racingForm" class="col-sm-6 p-6">
+            
+
+        </div>
+    </div>
+  
+</div>
         
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');

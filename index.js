@@ -1,5 +1,5 @@
 const {makeroom,getMembers,addMember} = require('./database')
-
+const {getRandomeText} = require('./getText');
 const express = require('express');
 const { time } = require('console');
 const cors = require('cors');
@@ -74,7 +74,7 @@ io.on('connection' , (socket)=>{
     })
 
     socket.on('startGame',(roomname)=>{
-        var text = "Running is the way in which people or animals travel quickly on their feet. It is a method of travelling on land. It is different to walking in that both feet are regularly off the ground at the same time.[1] Different terms are used to refer to running according to the speed: jogging is slow, and sprinting is running fast.Running is a popular form of exercise. It is also one of the oldest forms of sport. The exercise is known to be good for health; it helps breathing and heartbeat, and burns any spare calories. Running keeps a person fit and active. It also relieves stress. Running makes a person thirsty, so it is important to drink water when running."
+        var text = getRandomeText();
         io.in(roomname).emit('start',text);
     })
 })

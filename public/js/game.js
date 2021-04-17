@@ -102,6 +102,7 @@ textArea.addEventListener('input',function(){
         // document.getElementById(id+"completed").innerText = "100%"
         socket.emit('noteCompleted',roomname,name,id);
         socket.emit('broadcastProgress',roomname,id,"100")
+        startButton.style.display = 'inline';
      }else{
      
      var correctString =   para.substring(0,index)
@@ -145,7 +146,14 @@ socket.on('completed',(name,id,time)=>{
 
 
 socket.on('start',(text)=>{
-      
+     completed = 0;
+     startButton.style.display = 'none';
+     document.getElementById('car'+id).style.marginLeft =  "0%";
+     document.getElementById('widthBar'+id).style.width="0%"
+       textArea.innerHTML = "";
+       correct.innerHTML=""
+       incorrect.innerHTML="";
+       paraDisplay.innerHTML="";
        wordLength = text.length;
        timeTaken = 0;
        console.log(wordLength)

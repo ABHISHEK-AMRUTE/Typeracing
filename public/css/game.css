@@ -1,8 +1,8 @@
 body{
-    background: #ECE9E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+ /* background: #ECE9E6;  
+ background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);  */
+  background-color: whitesmoke !important;
 }
 
 .redd{
@@ -37,16 +37,15 @@ body{
 .wordpad{
     margin-top: 20px;
     /* position: fixed; */
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
     /* bottom: 0; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 20px;
     /* left: 0;
     right: 0; */
-    margin-left: 30px;
-    margin-right: 30px;
+    
     text-align: center;
-    background-color: whitesmoke;
+    
 }
 
 
@@ -71,13 +70,15 @@ user-select: none;
 }
 
 .containerForCars{
+  
     margin-top: 40px;
     margin-left: 30px;
     margin-right: 30px;
     border: 2px solid grey;
-    border-radius: 10px;
+    border-radius: 3px;
     padding: 10px;
-    background-color: white;
+    
+    background-color:white;
 }
 
 .notification{
@@ -90,11 +91,13 @@ user-select: none;
 .navigation{
     /* position: fixed;
     top: 0;
+    right :0;
     left: 0; */
-   
-    /* right: 0; */
+    background-color: #1e1d1de3;
+    padding: 20px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
-     padding: 10px;
 }
 
 .blink{
@@ -106,3 +109,9 @@ user-select: none;
 .typingSpeed{
     font-weight: bold;
 }
+
+.buttonArea{
+    text-align: left;
+}
+
+
