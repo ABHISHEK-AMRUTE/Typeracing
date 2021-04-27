@@ -11,7 +11,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js"
+        integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw=="
+        crossorigin="anonymous"></script>
     <link rel="icon" href="./res/keyboardd.svg" type=" image/svg+xml">
 </head>
 
@@ -19,117 +21,140 @@
 
     <div class="navi">
         <span class="customTab">
-            
+
             <a href="#startRacing" style="text-decoration: none; color: white;">About</a>
         </span>
         <span class="customTab">
             <a href="#profile" style="text-decoration: none; color: white;">Profile</a>
-  
+
         </span>
         <span class="customTab">
-            <a href="#startRacing" style="text-decoration: none; color: white;">Ranks</a>
-            
+            <a href="#ranks" style="text-decoration: none; color: white;">Ranks</a>
+
         </span>
     </div>
 
     <div class="mainHeading">
         TypeRacing<br>
-        <button type="button" class="btn btn-secondary" ><a href="#startRacing" style="text-decoration: none; color: white;">Start Racing</a></button>
+        <button type="button" class="btn btn-secondary"><a href="#startRacing"
+                style="text-decoration: none; color: white;">Start Racing</a></button>
     </div>
     <div class="bottom-paper">
 
 
-        <img  ondragstart="return false" class="bottom-waves" src="./res/bottom_waves.svg">
+        <img ondragstart="return false" class="bottom-waves" src="./res/bottom_waves.svg">
 
 
 
 
-        <div class="row" id="startRacing">
+        <div class="row" id="startRacing" style="margin-top: 20px;">
             <div class="col-sm-6 p-6">
                 <img ondragstart="return false" class="teslaImage" src="./res/tesla.svg">
 
             </div>
 
             <div class="racingForm" class="col-sm-6 p-6">
-               <div style="padding: 25px;">
-                <div class="formHead"> Join Tracks</div>
-                <input id="roomname" type="text"  class="inputs" placeholder="RoomName" /><br>
+                <div style="padding: 25px;">
+                    <div class="formHead"> Join Tracks</div>
+                    <input id="roomname" type="text" class="inputs" placeholder="RoomName" /><br>
 
-                <input type="text"  class="inputs" placeholder="NickName"/>
-                <div style="text-align: right; margin-top: 20px;">
-                    <button   id="game" type="button" class="btn btn-secondary">Start Racing</button>
-   
+                    <input type="text" class="inputs" placeholder="NickName" />
+                    <div style="text-align: right; margin-top: 20px;">
+                        <button id="game" type="button" class="btn btn-secondary">Start Racing</button>
+
+                    </div>
                 </div>
-               </div>
 
             </div>
         </div>
 
-<div id="profile">
+        <div id="profile">
+            <div class="profileHead"> Profile(coming soon)</div>
+            <div class="row">
+                <div class="col-sm-6 p-6">
 
-    <div class="row" id="startRacing">
-        <div class="col-sm-6 p-6" style="padding: 50px;">
-            <canvas id="myChart" width="auto" height="auto"></canvas>
+                    <div class="imageSection">
+                        <img src="./res/man_typing.gif" class="profileImage"><br><br>
+                        <h2>User Name</h2>
+                        <h4>Typist status</h4>
+                        <div>
+                            Best Speed : 120 WPM &nbsp;&nbsp; &nbsp; Avg Speed : 70 WPM
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 p-6">
+                    <div class="imageSection">
+                        <div style="width: 90%;">
+                            <canvas id="myChart" width="auto" height="auto"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
         </div>
+        <div id="ranks">
+            <div class="profileHead"> Ranks</div>
 
-        <div class="racingForm" class="col-sm-6 p-6">
-            
+
+            <div style="margin-left: 10%; margin-right: 10%;">
+                <h4>Top five typist(coming soon)</h4><br>
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action">Sample user one</h10></a>
+                    <a class="list-group-item list-group-item-action">Sample user two</h10></a>
+                    <a class="list-group-item list-group-item-action">Sample user three</h10></a>
+                    <a class="list-group-item list-group-item-action">Sample user four</h10></a>
+                    <a class="list-group-item list-group-item-action">Sample user five</h10></a>
+
+                </div>
+            </div>
 
         </div>
-    </div>
-  
-</div>
-        
-<script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: 'WPM',
-            data: [112, 49, 35, 55, 52, 113],
-            backgroundColor: [
-                'black'
-            ],
-            borderColor: [
-                '#212121',
-                
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['19', '20', '21', '22', '23', '25'],
+                    datasets: [{
+                        label: 'WPM',
+                        data: [112, 49, 35, 55, 52, 113],
+                        backgroundColor: [
+                            'black'
+                        ],
+                        borderColor: [
+                            '#212121',
+
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
 
         <img class="footer-waves" ondragstart="return false" src="./res/footer.svg">
         <div class="belowFooter">
-          <div class="footerText">  Project by Abhishek Amrute <br> Find me at</div>
-         <div style="margin-top: 10px; text-align: center;">
-            <a  target="_blank" href="https://www.linkedin.com/in/abhishek-amrute-33808a172/"><img title="linkedin" class="icons" src="./res/linkedin.svg"></a>
-            <a  target="_blank" href="https://github.com/ABHISHEK-AMRUTE"> <img title="Github" class="icons" src="./res/github-sign.svg"></a>
-                <a  target="_blank" href="https://dribbble.com/abhishek_bt18"> <img  title="Dribbble" class="icons" src="./res/dribbble.svg"></a>
-         </div>
-         <!-- Tech Stack<br>
-         <ul>
-             <li>Plain HTML/CSS</li>
-             <li>JavaScript</li>
-             <li>
-                 Artifacts using Figma
-             </li>
-             <li>
-                 NodeJs backend
-             </li>
-         </ul> -->
+           
+            <div style="text-align: center;">
+                <a target="_blank" href="https://www.linkedin.com/in/abhishek-amrute-33808a172/"><img title="linkedin"
+                        class="icons" src="./res/linkedin.svg"></a>
+                <a target="_blank" href="https://github.com/ABHISHEK-AMRUTE"> <img title="Github" class="icons"
+                        src="./res/github-sign.svg"></a>
+                <a target="_blank" href="https://dribbble.com/abhishek_bt18"> <img title="Dribbble" class="icons"
+                        src="./res/dribbble.svg"></a>
+            </div><br>
+            <div class="footerText"> Project by Abhishek Amrute</div>
         </div>
-       
+
     </div>
 
 </body>
