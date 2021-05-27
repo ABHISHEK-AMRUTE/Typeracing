@@ -84,7 +84,7 @@
     <div class="card shadow-sm p-3 mb-5" style="width : 70%;">
          
         <div style="padding: 2vw;">
-            <h4>  Your racing history</h4> 
+            <h4>  Your last racing stats </h4> 
             <canvas id="myChart" width="auto" height="auto"></canvas>
         </div>
     </div>
@@ -110,10 +110,10 @@
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['Bob Proctor has', 'formed the ', 'habit of ', 'reading a few'],
             datasets: [{
                 label: 'WPM',
-                data: [112, 49, 35, 55, 52, 113],
+                data: [80,70,40,50],
                 backgroundColor: [
                     'black'
                 ],
