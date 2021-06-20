@@ -49,7 +49,7 @@ const timerInSec = document.getElementById('timerInSec');
 const textArea = document.getElementById('inputLines')
 const rankBoard = document.getElementById('rankboard');
 const trafficLight = document.getElementById('trafficLight');
-
+const copyLink = document.getElementById('copyLink');
 
 
 // textArea.readOnly = true;
@@ -62,6 +62,20 @@ if(is_admin)
     startButton.style.visibility = 'hidden';
 }
 
+inviteButton.addEventListener('click',function (){
+     console.log(window.location.href)
+     var linkTextArea = document.getElementById('inviteLink')
+     linkTextArea.value = window.location.href;
+     
+
+});
+
+copyLink.addEventListener('click',function(){
+    var linkTextArea = document.getElementById('inviteLink')
+    linkTextArea.select();
+    document.execCommand("copy");
+    console.log('coppied')
+});
 
 
 startButton.addEventListener('click',function(){
