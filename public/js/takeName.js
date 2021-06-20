@@ -10,7 +10,10 @@ button_submit.addEventListener('click',function(){
     {
         localStorage.setItem('userName',name.value);
         localStorage.setItem('userId',ID.value);
-
+        
+        var redirectUrl = localStorage.getItem('redirectUrl');
+        if(redirectUrl === "")
          location.replace('../../');
+         else location.replace(redirectUrl);
     }
 })

@@ -22,6 +22,7 @@ is_admin = true;
 if(name==null || id==null)
 {
     console.log("ha null hai bhai, mai ja raha by....")
+    localStorage.setItem('redirectUrl' , window.location.href);
     location.replace('../html/takeName.html');
 }else{
     socket.emit('joinroom',roomname,name,id,0);
