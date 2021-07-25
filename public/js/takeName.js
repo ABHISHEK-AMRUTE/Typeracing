@@ -12,7 +12,7 @@ button_submit.addEventListener('click',function(){
         localStorage.setItem('userId',ID.value);
         
         var redirectUrl = localStorage.getItem('redirectUrl');
-        if(redirectUrl === "")
+        if(redirectUrl === "" || redirectUrl == null)
          location.replace('../../');
          else location.replace(redirectUrl);
     }
